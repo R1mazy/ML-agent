@@ -12,7 +12,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 os.environ["PINECONE_API_KEY"] = PINECONE_API_KEY
 os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 
-extracted_data = load_pdf("data")
+extracted_data = load_pdf("data/")
 minimal_docs = filter_to_minimal_docs(extracted_data)
 texts_chunks = text_split(minimal_docs)
 embedding = download_embeddings()
